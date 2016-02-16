@@ -28,6 +28,8 @@ RUN cd $AIRPAL_HOME \
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 COPY airpal /usr/sbin/airpal
 
+RUN chmod +x /docker-entrypoint.sh /usr/sbin/airpal
+
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
 EXPOSE 8081 8082
